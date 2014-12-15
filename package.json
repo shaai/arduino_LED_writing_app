@@ -1,0 +1,6 @@
+{
+  "name": "arduino_LED_writing_app",
+  "version": "0.0.1",
+  "description": "arduino LED writing app",
+  "dependencies": {}
+}
