@@ -4,8 +4,6 @@ var io = require('socket.io')(http);
 var five = require("johnny-five");
 var board = new five.Board();
 
-app.use(express.static('public'));
-
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
