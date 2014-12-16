@@ -2,7 +2,9 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var five = require("johnny-five");
-var board = new five.Board();
+var board = new five.Board({
+  repl: false
+});
 
 
 app.set('port', (process.env.PORT || 3000))
@@ -21,6 +23,9 @@ io.on('connection', function(socket){
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
+    // print message to arduino
+    // var msg = [];
+    // display.draw(msg, msg.shift());
   });
 });
 
