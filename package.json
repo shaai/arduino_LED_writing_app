@@ -4,6 +4,7 @@
   "description": "arduino LED writing app",
   "dependencies": {
     "express": "^4.10.2",
+    "johnny-five": "^0.8.33",
     "socket.io": "^1.2.1"
   }
 }
