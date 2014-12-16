@@ -1,5 +1,6 @@
 var app = require('express')();
 var http = require('http').Server(app);
+var readline = require("readline");
 var io = require('socket.io')(http);
 var five = require("johnny-five");
 var board = new five.Board({
