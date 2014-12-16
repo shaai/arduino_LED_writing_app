@@ -7,7 +7,6 @@ var board = new five.Board({
   repl: false
 });
 
-
 app.set('port', (process.env.PORT || 3000))
 
 app.get('/', function(req, res){
@@ -33,3 +32,17 @@ io.on('connection', function(socket){
 http.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
+
+
+// when the board is connected, execute this code
+board.on("ready", function() {
+
+  var display = new five.Led.Matrix({
+    pins: {
+      data: 2,
+      clock: 3,
+      cs: 4
+    }
+  });
+
+});
