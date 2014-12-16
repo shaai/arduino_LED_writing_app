@@ -33,8 +33,7 @@ http.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
 
-
-// when the board is connected, execute this code
+// when the board is ready, execute this code
 board.on("ready", function() {
 
   var display = new five.Led.Matrix({
@@ -44,5 +43,15 @@ board.on("ready", function() {
       cs: 4
     }
   });
+
+
+  io.on('connection', function(socket){
+    socket.on('chat message', function(msg){
+      message = msg.split("");
+      display.draw(0, message.shift());
+    });
+  });
+
+  display.on();
 
 });
