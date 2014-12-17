@@ -40,16 +40,20 @@ board.on("ready", function() {
     }
   });
 
+
   io.on('connection', function(socket){
     socket.on('chat message', function(msg){
 
       var messageArray = msg.split("");
-      for (var i = 0; i < messageArray.length; i++) {
-        display.draw(0, messageArray[i]);
-
+      var arrayLength = messageArray.length;
+      for (var j = 0; j < 3; j++) {
+        for (var i = 0; i < arrayLength; i++) {
+          display.draw(0, messageArray[i]);
+        }
       }
     });
   });
+
 
   display.on();
 
