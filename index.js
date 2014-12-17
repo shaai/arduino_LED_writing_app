@@ -44,11 +44,13 @@ board.on("ready", function() {
     }
   });
 
-
   io.on('connection', function(socket){
     socket.on('chat message', function(msg){
-      message = msg.split("");
-      display.draw(0, message.shift());
+      var messageArray = msg.split("");
+      var arrayLength = messageArray.length;
+      for (var i = 0; i < arrayLength; i++) {
+        display.draw(0, messageArray[i]);
+      }
     });
   });
 
