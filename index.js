@@ -1,6 +1,5 @@
 var app = require('express')();
 var http = require('http').Server(app);
-var readline = require("readline");
 var io = require('socket.io')(http);
 var five = require("johnny-five");
 var board = new five.Board({
@@ -43,9 +42,11 @@ board.on("ready", function() {
 
   io.on('connection', function(socket){
     socket.on('chat message', function(msg){
+
       var messageArray = msg.split("");
       for (var i = 0; i < messageArray.length; i++) {
         display.draw(0, messageArray[i]);
+
       }
     });
   });
