@@ -23,9 +23,6 @@ io.on('connection', function(socket){
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
-    // print message to arduino
-    // var msg = [];
-    // display.draw(msg, msg.shift());
   });
 });
 
@@ -47,8 +44,7 @@ board.on("ready", function() {
   io.on('connection', function(socket){
     socket.on('chat message', function(msg){
       var messageArray = msg.split("");
-      var arrayLength = messageArray.length;
-      for (var i = 0; i < arrayLength; i++) {
+      for (var i = 0; i < messageArray.length; i++) {
         display.draw(0, messageArray[i]);
       }
     });
