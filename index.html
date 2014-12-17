@@ -12,13 +12,25 @@
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages li { padding: 10px 20px; }
       #messages li:nth-child(odd) { background: #eee; }
+      p {font-size: 25px; color: white; padding-top: 2%; padding-bottom: 1%;}
     </style>
   </head>
 
   <body>
     <ul id="messages"></ul>
     <form action="">
-      <input placeholder="Type something here" id="m" autocomplete="off" /><button>SEND</button>
+      <input placeholder="Type your message here" id="m" autocomplete="off" /><button>SEND</button>
+
+      <p>Repeat Message
+      <select name="cars">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      Times</p>
+
     </form>
 
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
