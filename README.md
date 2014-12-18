@@ -19,5 +19,17 @@ Components you'll need:
   * MAX7219 Red Dot Matrix Display Module
   * Arduino USB cable
 
-  image of components: ![Alt text](https://cloud.githubusercontent.com/assets/6833837/5483412/634e4080-863f-11e4-860d-e28800a4d49c.jpg)
+image of components: ![Alt text](https://cloud.githubusercontent.com/assets/6833837/5483412/634e4080-863f-11e4-860d-e28800a4d49c.jpg)
 
+
+###Connecting the Components
+
+  LED matrix connections to arduino:
+    * VCC to 5V
+    * GND to GND
+    * DIN to Digital 2
+    * CS to Digital 4
+    * CLK to Digital 3
+
+![Alt text](https://cloud.githubusercontent.com/assets/6833837/5483417/741f95b2-863f-11e4-9db2-3f834c352550.jpg)
+![Alt text](https://cloud.githubusercontent.com/assets/6833837/5483413/6be773ec-863f-11e4-8484-44e0983e2c5b.jpg)
