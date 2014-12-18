@@ -46,7 +46,7 @@ board.on("ready", function() {
 
       var messageArray = msg.split("");
       var arrayLength = messageArray.length;
-      for (var j = 0; j < 3; j++) {
+      for (var j = 0; j < 20; j++) {
         for (var i = 0; i < arrayLength; i++) {
           display.draw(0, messageArray[i]);
         }
