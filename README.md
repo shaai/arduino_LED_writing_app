@@ -1,18 +1,12 @@
-Writing messages to an arduino
+Arduino LED Messaging App
 ===============================
 A multi-user chat-like application that sends user typed messages to an arduino and MAX7219 LED Matrix display module.
 
-
-##Install and run the app
-
-1. Make sure Node.JS is installed on your computer: http://nodejs.org
-2. Clone or download this repo.
-3. In terminal, cd into the directory.
-4. Run the command `npm install`
-5. Run `node index.js` to start the server.
-6. Open your browser and go to http://localhost:3000
-
-To see the chat application live, visit
+###Platform and frameworks used
+node.js
+express.io
+johnny-five
+socket.io
 
 
 ##Setting Up the Arduino and MAX7219 Matrix
@@ -40,10 +34,19 @@ To see the chat application live, visit
 
 2. Connect the USB cable from the arduino to your computer.
 3. Download the Arduino software if you have not already: http://arduino.cc/en/Main/Software
-4. Open up the Arduino IDE and under the 'Tools' menu make sure the correct Board and Serial Port are selected.
+4. Open up the Arduino IDE and under the **Tools** menu make sure the correct Board and Serial Port are selected.
 5. Install the "StandardFirmata" sketch in order to be able to use the Arduino IDE. **File > Examples > Firmata > StandardFirmata**
 
 
+##Install and run the app
 
+1. Make sure Node.JS is installed on your computer: http://nodejs.org
+2. Clone or download this repo.
+3. In terminal, cd into the directory.
+4. Run the command `npm install` to install dependencies.
+5. Run the command `node index.js` to start the server.
+6. Open your browser and go to http://localhost:3000
+
+To see the application live, visit https://arduino-led-writing.herokuapp.com
 
 
