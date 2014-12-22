@@ -2,7 +2,7 @@ Arduino LED Messaging App
 ===============================
 A multi-user chat-like application that sends user typed messages to an arduino and MAX7219 LED Matrix display module.
 
-####Platform and frameworks used
+####Libraries and frameworks used
 * node.js
 * express.io
 * johnny-five
